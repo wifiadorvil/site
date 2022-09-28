@@ -1,64 +1,105 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box; }
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-input[type=submit] {
-  background-color: #4a3aa6;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    input[type=text],
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+    input[type=submit] {
+      background-color: #4a3aa6;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
-</style>
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  </style>
 </head>
+
 <body>
 
-<h3>Contactez-nous</h3>
+  <h3>Contactez-nous</h3>
 
-<div class="container">
-  <form action="">
-    <label for="fname">Votre nom complet</label>
-    <input type="text" id="fname" name="fullname" placeholder="Entrez votre nom complet">
+  <div class="container">
+    <form id="contact-form">
+      <label for="fname">Votre nom complet</label>
+      <input type="text" id="fname" name="fullname" placeholder="Entrez votre nom complet">
 
-    <label for="courriel">Votre courriel</label>
-    <input type="text" id="courriel" name="courriel" placeholder="Entrez votre courriel">
+      <label for="courriel">Votre courriel</label>
+      <input type="text" id="courriel" name="courriel" placeholder="Entrez votre courriel">
 
-    <label for="telephone">Votre numéro</label>
-    <input type="text" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone">
+      <label for="telephone">Votre numéro</label>
+      <input type="text" id="telephone" name="telephone" placeholder="Entrez votre numéro de téléphone">
 
 
-    <label for="message">Votre message </label>
-    <textarea id="message" name="message" style="height:200px"></textarea>
+      <label for="message">Votre message </label>
+      <textarea id="message" name="message" style="height:200px"></textarea>
 
-    <input type="submit" value="Submit">
-  </form>
-</div>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
+
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCTU_D7hLl5RWxPV8tFkA_jeq6USOCfRbY",
+      authDomain: "siteweb-f5d80.firebaseapp.com",
+      projectId: "siteweb-f5d80",
+      storageBucket: "siteweb-f5d80.appspot.com",
+      messagingSenderId: "340318359695",
+      appId: "1:340318359695:web:c7c5ae4a8fc31ba85060fa",
+      measurementId: "G-4MYX9MHD61",
+      databaseURL: 'https://siteweb-f5d80-default-rtdb.firebaseio.com/'
+      // databaseURL: 'https://learningfirebase-d67e5-default-rtdb.firebaseio.com/'
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+  </script>
+
+  <script type="module" src="contact.js"></script>
 
 </body>
+
 </html>

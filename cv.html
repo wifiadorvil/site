@@ -1,62 +1,126 @@
 <html>
+
 <head>
     <meta charset="utf-8">
 
 </head>
 
-<body >
+<body>
 
-    <div id="div1"> 
-     
+    <div id="div1">
+
         <div id="form">
-            <form> 
-                <table  border="0">
-                     <tr><td >Nom: </td><td ><input type="text" name="Nom"></td></tr>
-                     <tr><td >Prénom: </td><td ><input type="text" name="Prenom"></td></tr>
-                     <tr><td >Téléphone:</td><td ><input type="text" name="Téléphone"></td></tr>
-                     <tr><td >Cellulaire: </td><td ><input type="text" name="Cellulaire"></td></tr>
-                     <tr><td >Courriel: </td><td ><input type="text" name="Courriel"></td></tr>
-                     <tr><td style="text-align: left;">Emploi demandé:</td><td><select name="emplois" >
-                        <option value="1" >Préposé aux bénéficiaire</option>
-                        <option value="2">Comptable</option>
-                        <option value="3">Services à la clientèle</option>
-                        <option value="2">Nutritionniste</option>
-                        <option value="2">enseignante</option>
-                        <option value="2">Éducatrice à l'enfance</option>
-                        <option value="2">Développeur</option>
-                        <option value="2">Agent de sécurité</option>
-                    </td></tr>
-                    <tr><td style="text-align: left;">Région:</td><td><select name="region" >
-                        <option value="1" >Lanaudières</option>
-                        <option value="2">Repentigny</option>
-                        <option value="3">Longueuil</option>
-                        <option value="4">Montréal</option>
-                        <option value="5">Laval</option></td></tr>
-                        <tr><td><label for="cv">cv:</label></td><td><input type="file"
-                            id="cv" name="cv"
-                            accept="Document/doc, Document/pdgàf"> </td></tr>
+            <form id="form-cv">
+                <table border="0">
+                    <tr>
+                        <td>Nom: </td>
+                        <td><input type="text" name="Nom"></td>
+                    </tr>
+                    <tr>
+                        <td>Prénom: </td>
+                        <td><input type="text" name="Prenom"></td>
+                    </tr>
+                    <tr>
+                        <td>Téléphone:</td>
+                        <td><input type="text" name="Téléphone"></td>
+                    </tr>
+                    <tr>
+                        <td>Cellulaire: </td>
+                        <td><input type="text" name="Cellulaire"></td>
+                    </tr>
+                    <tr>
+                        <td>Courriel: </td>
+                        <td><input type="text" name="Courriel"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Emploi demandé:</td>
+                        <td><select name="emplois">
+                                <option value="1">Préposé aux bénéficiaire</option>
+                                <option value="2">Comptable</option>
+                                <option value="3">Services à la clientèle</option>
+                                <option value="2">Nutritionniste</option>
+                                <option value="2">enseignante</option>
+                                <option value="2">Éducatrice à l'enfance</option>
+                                <option value="2">Développeur</option>
+                                <option value="2">Agent de sécurité</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Région:</td>
+                        <td><select name="region">
+                                <option value="1">Lanaudières</option>
+                                <option value="2">Repentigny</option>
+                                <option value="3">Longueuil</option>
+                                <option value="4">Montréal</option>
+                                <option value="5">Laval</option>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="cv">cv:</label></td>
+                        <td><input type="file" id="cv" name="cv" accept="Document/doc, Document/pdgàf"> </td>
+                    </tr>
 
-                            <tr><td >Secteur d'activité: </td></tr>
+                    <tr>
+                        <td>Secteur d'activité: </td>
+                    </tr>
 
                     <div>
-                        <tr><td>Centre Hospitaliers<input type="checkbox" name="centre"></td></tr>
-                        <tr><td>CHSLD<input type="checkbox" name="chsld"></td></tr>
-                        <tr><td>CLSC<input type="checkbox" name="clsc"></tr>
-                        <tr><td>Centre de réadaptation<input type="checkbox" name="clsc"></tr>
-                        <tr><td>Milieux correctionnels <input type="checkbox" name="clsc"></tr>
-                        <tr><td>Congrégations religieuses <input type="checkbox" name="clsc"></tr>
-                        <tr><td>Etudes cliniques <input type="checkbox" name="clsc"></tr>
+                        <tr>
+                            <td>Centre Hospitaliers<input type="checkbox" value="" name="centre"></td>
+                        </tr>
+                        <tr>
+                            <td>CHSLD<input type="checkbox" name="chsld"></td>
+                        </tr>
+                        <tr>
+                            <td>CLSC<input type="checkbox" name="clsc">
+                        </tr>
+                        <tr>
+                            <td>Centre de réadaptation<input type="checkbox" name="clsc">
+                        </tr>
+                        <tr>
+                            <td>Milieux correctionnels <input type="checkbox" name="clsc">
+                        </tr>
+                        <tr>
+                            <td>Congrégations religieuses <input type="checkbox" name="clsc">
+                        </tr>
+                        <tr>
+                            <td>Etudes cliniques <input type="checkbox" name="clsc">
+                        </tr>
                     </div>
-          
-
-
-                     
                 </table>
+
+                <input type="submit" value="Envoyer">
             </form>
         </div>
-        
-   </div>
-   
+
+    </div>
+
+    <button id="logout" class="logout">Desconnexion </button>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCTU_D7hLl5RWxPV8tFkA_jeq6USOCfRbY",
+            authDomain: "siteweb-f5d80.firebaseapp.com",
+            projectId: "siteweb-f5d80",
+            storageBucket: "siteweb-f5d80.appspot.com",
+            messagingSenderId: "340318359695",
+            appId: "1:340318359695:web:c7c5ae4a8fc31ba85060fa",
+            measurementId: "G-4MYX9MHD61"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+    <script type="module" src="cv.js"></script>
+
 </body>
 
 </html>
