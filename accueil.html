@@ -215,10 +215,20 @@
         }
 
 
-        .Titre {
-            background: linear-gradient(to right, #4a3aa6, #000);
-            -webkit-text-fill-color: transparent;
-        }
+    h1 {
+        position: absolute;
+        top: 10%;
+        left: 2%;
+  
+        font-size: 70px;
+        font-family:  fantasy;
+        background: linear-gradient(
+            to right, 
+            #471fcb, #5774f8,
+            #6f81ea, #80a7f9);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}
     </style>
 </head>
 
@@ -232,9 +242,9 @@
 
         </ul>
     </nav>
-    <p class="Titre">
-    <h3>WD Agency</h3>
-    </p>
+    
+    <h1>WD Agency</h1>
+    
     <button class="button btn-emploi" onclick="window.location.href='cv.html'">
         <span>Trouver un emploi </span>
         <span>--</span>

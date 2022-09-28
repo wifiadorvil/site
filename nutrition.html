@@ -5,52 +5,259 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+         * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .nav-list {
+            padding: 1rem o;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .nav-item {
+            margin-right: 2rem;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .nav-item a {
+            color: black;
+            letter-spacing: 1.2px;
+        }
+
+        .nav-item:first-child {
+            margin-right: auto;
+            margin-left: 2rem;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 2000px;
+            margin: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 50px 0;
+            bottom: 0;
+            position: fixed;
+            width: 1600px;
+            height: 199px;
+
+
+        }
+
+        .footer-col {
+            width: 15%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 70px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        /*responsive*/
+        @media(max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+
+    </style>
 </head>
 <body>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="connexion2.html">Connexion</a></li>
+            <li class="nav-item"><a href="accueil.html">Accueil</a></li>
+            <li class="nav-item"><a href="poste.html">Postes offerts</a></li>
+            <li class="nav-item"><a href="contact.html">Contactez-nous</a></li>
+    
+        </ul>
+    </nav>
     <p>
-        DIÉTÉTISTE - NUTRITIONNISTE
+        <p>DIÉTÉTISTE - NUTRITIONNISTE</p>
 
-Garantie d’heures 7/15
+<p>Garantie d’heures 7/15</p>
 
-Direction des services multidisciplinaires
+<p>Direction des services multidisciplinaires</p>
 
-Centre hospitalier ultraspécialisé en cardiologie, l’Institut de Cardiologie de Montréal est voué aux soins, à la recherche, à l’enseignement, à la prévention, à la réadaptation, ainsi qu’à l’évaluation des nouvelles technologies en cardiologie. Constamment à l’avant-garde, l’ICM est un leader dans son domaine et joue un rôle de premier plan au Québec, au Canada et dans le monde. Il est affilié à l’Université de Montréal.
+<p>Centre hospitalier ultraspécialisé en cardiologie, l’Institut de Cardiologie de Montréal est voué aux soins, à la recherche, à l’enseignement, à la prévention, à la réadaptation, ainsi qu’à l’évaluation des nouvelles technologies en cardiologie. Constamment à l’avant-garde, l’ICM est un leader dans son domaine et joue un rôle de premier plan au Québec, au Canada et dans le monde. Il est affilié à l’Université de Montréal.</p>
 
-MANDAT
+<p>MANDAT</p>
 
-Personne qui évalue l’état nutritionnel, détermine et assure la mise en œuvre d’une stratégie d’intervention visant à adapter l’alimentation en fonction des besoins pour maintenir ou rétablir la santé du patient. Elle participe à l’enseignement clinique dans son établissement.
+<p>Personne qui évalue l’état nutritionnel, détermine et assure la mise en œuvre d’une stratégie d’intervention visant à adapter l’alimentation en fonction des besoins pour maintenir ou rétablir la santé du patient. Elle participe à l’enseignement clinique dans son établissement.
+</p>
+<p>Exigences
+</p>
+<p>
+    <ul>
+        <li> Doit détenir un premier diplôme universitaire terminal en diététique ou en nutrition;
+        </li>
+        <li> Doit être membre de l’Ordre professionnel des Diététistes du Québec;
+        </li>
+        <li> Expérience en milieu hospitalier (un atout).
+        </li>
+    </ul>
+    </p>
+    <p>Compétences recherchées
+    </p>
+    <ul>
+    <li> Excellentes habiletés de communication;
+    </li>
+    <li>Facilité à travailler en équipe et à entretenir de bonnes relations;
+    </li>
+    <li>Capacité à organiser son travail efficacement et à gérer les priorités;
+    </li>
+    <li>Intérêt marqué pour la prise en charge du soutien nutritionnel des patients dont l'état est critique (alimentation entérale et parentérale);
+    </li>
+    <li>Capacité à mettre en place des stratégies nutritionnelles qui optimisent les fonctions métaboliques;
+    </li></ul>
+<p>Conditions de travail
+    <ul><li> Garantie d’heures avec forte possibilité de temps complet;
+    </li>
+    <li>Rémunération de 27,62$ à 48,94$ selon l’expérience ;
+    </li></ul>
+</p>
+<p>POUR SOUMETTRE VOTRE CANDIDATURE
+</p>
+<ul>
+    <li>Date d’échéance pour postuler : 31 Août 2022
+    </li>
+    <li>Par courriel : dotation@icm-mhi.org
+    </li>
+</ul>
 
-Exigences
-• Doit détenir un premier diplôme universitaire terminal en diététique ou en nutrition;
-• Doit être membre de l’Ordre professionnel des Diététistes du Québec;
-• Expérience en milieu hospitalier (un atout).
-
-Compétences recherchées
-• Excellentes habiletés de communication;
-• Facilité à travailler en équipe et à entretenir de bonnes relations;
-• Capacité à organiser son travail efficacement et à gérer les priorités;
-• Intérêt marqué pour la prise en charge du soutien nutritionnel des patients dont l'état est critique (alimentation entérale et parentérale);
-• Capacité à mettre en place des stratégies nutritionnelles qui optimisent les fonctions métaboliques;
-• Évaluation de la déglutition et surveillance du plan de soins nutritionnels.
-
-Conditions de travail
-• Garantie d’heures avec forte possibilité de temps complet;
-• Rémunération de 27,62$ à 48,94$ selon l’expérience ;
-• Autres conditions en fonction des normes en vigueur.
-
-POUR SOUMETTRE VOTRE CANDIDATURE
-• Date d’échéance pour postuler : 31 Août 2022
-• Par courriel : dotation@icm-mhi.org
-
-Visitez notre site web : www.icm-mhi.org
-
-L’Institut de Cardiologie de Montréal souscrit à un programme d’accès à l’égalité.
-
-Les candidatures des groupes visés (les femmes, les minorités visibles, les minorités ethniques,
-
+<p>Visitez notre site web : www.icm-mhi.org
+</p>
+<p>L’Institut de Cardiologie de Montréal souscrit à un programme d’accès à l’égalité.
+</p>
+<p>Les candidatures des groupes visés (les femmes, les minorités visibles, les minorités ethniques,
 les Autochtones et les personnes handicapées) sont encouragées.
 
-Seules les personnes retenues dans le cadre du processus de sélection seront contactées
+</p>
+<p>Seules les personnes retenues dans le cadre du processus de sélection seront contactées
+</p>
     </p>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="#">À propos de nous</a></li>
+                        <li><a href="#">nos services</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Aide</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Services à la clientèle</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Suivez nous</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

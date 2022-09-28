@@ -27,8 +27,7 @@ const fcv = document.getElementById('form-cv');
 
 fcv.addEventListener('submit', (e) => {
   e.preventDefault();
-  const centre = fcv['centre'].value;
-  const centreText = fcv['centre'].checked;
+  const CentreHospitaliers = fcv['centre'].checked;
   console.log(centre, centreText);
 
   let activities = [];
