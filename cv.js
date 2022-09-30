@@ -1,5 +1,6 @@
-import { getAuth, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js';
-const auth = getAuth();
+
+import { getDatabase, ref, set, child, get } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js';
+
 
 // onAuthStateChanged(auth, (user) => {
 //   if (user) {
@@ -27,32 +28,39 @@ const fcv = document.getElementById('form-cv');
 
 fcv.addEventListener('submit', (e) => {
   e.preventDefault();
-<<<<<<< HEAD
-  const CentreHospitaliers = fcv['centre'].checked;
-  console.log(centre, centreText);
+  const nom = fcv['Nom'].value
+  const prenom = fcv['Prenom'].value
+  const tel = fcv['Téléphone'].value
+  const cel = fcv['Cellulaire'].value
 
-=======
-  // const centre = fcv['centre'].value;
-  // const centreText = fcv['centre'].checked;
+  const courriel = fcv['Courriel'].value
+  const region = fcv['region'].value
+
+  const emploi=fcv['emplois'].value
+ 
+
   console.log(Array.from(fcv['activity']));
->>>>>>> dc94ebcb8da4d0c4ff4735115bc241c7683f8ed6
   let activities = [];
   Array.from(fcv['activity']).map((item) => {
     if (item.checked) {
       activities.push(item.value);
-    }
-  });
+  }
+});
   console.log(activities);
-  writeCVSData(activities);
+  writeCVSData(nom,prenom,tel,cel, courriel,emploi,region, activities);
 });
 
-function writeCVSData(name, email, phone, message, activities) {
+function writeCVSData(nom,prenom,tel,cel, courriel,emploi,region, activities) {
   const db = getDatabase();
-  set(ref(db, 'cvs/' + email), {
-    name,
-    email,
-    phone,
-    message,
-    activities,
+  set(ref(db, 'cvs/' + nom), {
+    nom,
+    prenom,
+    tel,
+    courriel,
+    emploi,
+    cel,
+    activities, 
+    region
+    
   });
 }

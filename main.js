@@ -1,8 +1,8 @@
 import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js';
 const auth = getAuth();
 
-const signIn = (email, password) => {
-  createUserWithEmailAndPassword(auth, email, password)
+const signIn = (nom, mdp) => {
+  createUserWithEmailAndPassword(auth, nom, mdp)
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
